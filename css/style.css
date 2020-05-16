@@ -10,7 +10,7 @@ body {
   background-size: auto 100vh;
   font-family: arial;
   height: 100vh;
-  font-size: 12px;
+  font-size: 13px;
 }
 
 /*telas maiores que 400px*/
@@ -94,3 +94,4 @@ a:hover {
   height: 100px;
   width: 100px;
 }
+
