@@ -8,8 +8,8 @@
 body {
   background-image: url('../img/desert-sun-day-4k-minimalism.jpg');
   background-size: auto 100vh;
-  font-family: arial;
   height: 100vh;
+  font-family: 'Roboto', sans-serif;
   font-size: 13px;
 }
 
@@ -79,19 +79,58 @@ a:hover {
 .site-title {
   color: whitesmoke;
   text-align: center;
-
 }
 
-.site-subtitle {
-  font-size: 2em;
+.site-title {
+  font-size: 4em;
+  font-family: 'Patua One', cursive;
 }
 
 .site-subtitle {
   font-style: italic;
 }
 
-.img-portfolio {
-  height: 100px;
-  width: 100px;
+.portfolio {
+  padding: 2em;
+  background-color: gray;
+  height: 100vh;
 }
 
+.portfolio h2 {
+  font-family: 'Patua One', cursive;
+  color: whitesmoke;
+  margin-bottom: 1.5em;
+  font-size: 2em;
+}
+
+.portfolio .grid {
+  display: grid;
+  gap: 2em;
+  justify-content: center;
+}
+
+@media (min-width: 600px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(2, 240px);
+  }
+}
+
+@media (min-width: 880px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(3, 240px);
+    align-content: center;
+    height: calc(100vh - 8em -48px);
+  }
+}
+
+.portfolio figure {
+  text-align: center;
+}
+
+.img-portfolio {
+  height: 180px;
+  width: 260px;
+  object-fit: cover;
+  object-position: left;
+  border-radius: 0%;
+}
