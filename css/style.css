@@ -111,6 +111,7 @@ a:hover {
   }
 }
 
+.sobre,
 .contato,
 .portfolio {
   padding: 2em;
@@ -118,12 +119,39 @@ a:hover {
   min-height: 100vh;
 }
 
+@media (min-width: 1200px) {
+  .sobre,
+  .contato,
+  .portfolio {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.sobre .avatar {
+  float: right;
+  margin-left: 2em;
+}
+
+.sobre .avatar img {
+  clip-path: polygon(25% 0%, 100% 0%, 76% 100%, 0% 100%);
+}
+
+.sobre h2,
 .contato h2,
 .portfolio h2 {
   font-family: 'Patua One', cursive;
   color: whitesmoke;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.2em;
   font-size: 2em;
+}
+
+.sobre p {
+  color: white;
+  margin-bottom: 1.4em;
+  text-indent: 1.4em;
+  text-align: justify;
 }
 
 .portfolio .grid {
@@ -161,6 +189,46 @@ a:hover {
 
 .img-portfolio:hover {
   transform: scale(1.2);
+}
+
+
+.flip-card {
+  height: 180px;
+  perspective: 1000px;
+}
+
+.flip-card:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card {
+  background-color: red;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 500ms;
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  backface-visibility: hidden;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.card-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, .7);
+  height: 180px;
+  width: 260px;
+  transform: rotateY(180deg);
 }
 
 .contato .icons {
